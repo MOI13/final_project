@@ -1,0 +1,42 @@
+---
+title: "Final Project Preliminary Report"
+author: "Shirley Song"
+date: "`r Sys.Date()`"
+knitr:
+  opts_chunk:
+    fig.align: center
+    fig.height: 5
+    fig.width: 7
+    results: markup
+---
+
+```{r, set-chunk-opts, echo = FALSE}
+library(knitr)
+opts_chunk$set(
+  echo = FALSE,  
+  warning = FALSE, 
+  message = FALSE
+)
+```
+
+## Introduction
+
+The dataset contains 369 unique patients with their scores of Patient Health Questionnaire-9 (PHQ-9) for depression screening and the seven question Generalized Anxiety Disorder-7 (GAD-7) mental illness screening survey documented. Both PHQ-9 and GAD-7 were collected with either a stereotype mobile apps or traditional method. Other variables like age group, gender, prior depression treatment, race, whether work remotely were also included.
+
+We are aiming to explore the depression diagnosis cut-off point using PHQ-9 or GAD-7 total score and see which covariates have the strongest correlation to the the depression diagnosis.
+
+## Tabular Analysis
+
+The Table describe the overall distribution of PHQ-9 and GAD-7 score, as well as other covariates distribution, stratified by two data collection methods.
+
+```{r}
+readRDS(here::here("output", "tabular.rds"))
+```
+
+## Graphical Analysis
+
+The graph show how total PHQ-9 and GAD-7 total score distributed and what should be the cut off point for Depression Diagnosis.
+
+```{r}
+readRDS(here::here("output", "graph.rds"))
+```
