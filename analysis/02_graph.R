@@ -2,11 +2,11 @@ here::i_am(
   "analysis/02_graph.R"
 )
 
-if(!require("pacman")) install.packages("pacman")
-pacman::p_load(
-  DescTools, tidyverse, magrittr, janitor,
-  knitr, kableExtra, patchwork, ggpubr, gt, gtsummary
-)
+library(tidyverse)
+library(patchwork)
+library(ggplot2)
+library(ggpubr)
+
 
 survey <- readRDS(here::here("data/intermediate/survey.rds"))
 

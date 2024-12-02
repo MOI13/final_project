@@ -1,4 +1,4 @@
-report.html: report.Rmd analysis/03_render.R install output/tabular.rds output/graph.rds 
+report.html: install output/tabular.rds output/graph.rds report.Rmd 
 	Rscript analysis/03_render.R
 
 .PHONY: install

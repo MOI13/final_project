@@ -1,9 +1,7 @@
-if(!require("pacman")) install.packages("pacman")
-pacman::p_load(
-  here, DescTools, tidyverse, magrittr, janitor,
-  knitr, kableExtra, patchwork, ggpubr, gt, gtsummary
-)
-
+library(gt)
+library(gtsummary)
+library(tidyverse)
+library(magrittr)
 
 here::i_am(
   "analysis/01_tabular.R"
@@ -71,8 +69,7 @@ p <- survey %>%
     all_continuous() ~ "t.test"
   )) %>%
   bold_p() %>%
-  modify_spanning_header(c("stat_1", "stat_2") ~ "**Data Collection Method**") %>%
-  as_gt()
+  modify_spanning_header(c("stat_1", "stat_2") ~ "**Data Collection Method**")
 
 
 saveRDS(p, here::here("output/tabular.rds"))

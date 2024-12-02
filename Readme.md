@@ -25,11 +25,12 @@
 
 `Makefile`
 
--   contains rules for building the report
+-   contains rules for make the report
+-   contains rules for update R project environment
 
 ## Generate the report
 
-1.  Clone the repository via `git clone git@github.com:`
+1.  Clone the repository via `git clone`
 
 2.  Generate the final report In the terminal
 
