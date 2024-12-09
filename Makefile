@@ -4,7 +4,7 @@ report.html: install output/tabular.rds output/graph.rds report.Rmd
 .PHONY: install
 install:
 	Rscript -e 'if (!("renv" %in% row.names(installed.packages()))) {install.packages("renv")}'
-	Rscript -e 'renv::restore()'
+	Rscript -e 'renv::restore(prompt=False)'
 	
 output/tabular.rds: analysis/01_tabular.R
 	Rscript analysis/01_tabular.R 
