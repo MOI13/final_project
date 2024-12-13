@@ -32,4 +32,6 @@ project_image: Dockerfile $(PROJECTFILES) $(RENVFILES)
 final_report/report.html: 
 	docker run -v "$$(pwd)/final_report":/home/rstudio/project/final_report project_image
     
+window_final_report/report.html: 
+	docker run -v \"$$(pwd)/final_report":/home/rstudio/project/final_report project_image
     

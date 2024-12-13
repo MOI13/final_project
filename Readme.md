@@ -38,7 +38,7 @@
 
     run `make clean`
 
-## Generate the report through docker
+## Generate the report through docker: this make file is designed for MacOS
 
 1.  Build the Docker Image
 
