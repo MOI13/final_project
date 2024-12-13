@@ -38,16 +38,20 @@
 
     run `make clean`
 
-## Generate the report through docker: this make file is designed for MacOS
+## Generate the report through docker
 
 1.  Build the Docker Image
 
     run `make project_image`
 
-2.  Run the Docker Container, mount the final_report folder and generate the report
+2.  For MacOS, run the Docker Container, mount the final_report folder and generate the report
 
     run `make final_report/report.html`
 
-3.  Clean up
+3.  For Windows, run the Docker Container, mount the final_report folder and generate the report
+
+    run `window_final_report/report.html`
+
+4.  Clean up
 
     run `make clean`
