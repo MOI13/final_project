@@ -46,7 +46,8 @@ saveRDS(survey, here::here("data/intermediate/survey.rds"))
 p <- survey %>%
   select(-c(id, Timestamp, id, `PHQ Total`, `GAD Total`)) %>%
   tbl_summary(
-    by = appVersion,  
+    by = appVersion, 
+    type = all_continuous() ~ "continuous2",
     label = list(
       PriorDepressionTreatment ~ "Previous Depression Treatment", 
       Gender ~ "Gender",

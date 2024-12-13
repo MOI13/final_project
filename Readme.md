@@ -28,14 +28,26 @@
 -   contains rules for make the report
 -   contains rules for update R project environment
 
-## Generate the report
+## Generate the report locally 
 
-1.  Clone the repository via `git clone`
+1.  Generate the final report In the terminal
 
-2.  Generate the final report In the terminal
+    run `make report.html`
 
-    run `make`
+2.  Clean up
 
-3.  Remove all files generated running `make` In the terminal
+    run `make clean`
+
+## Generate the report through docker
+
+1.  Build the Docker Image
+
+    run `make project_image`
+
+2.  Run the Docker Container, mount the final_report folder and generate the report
+
+    run `make final_report/report.html`
+
+3.  Clean up
 
     run `make clean`
