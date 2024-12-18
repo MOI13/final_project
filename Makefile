@@ -25,7 +25,7 @@ RENVFILES = renv.lock renv/activate.R
 
 # rule to build image
 project_image: Dockerfile $(PROJECTFILES) $(RENVFILES)
-	docker build -t project_image .
+	docker build -t moi13/rstudio4 .
 	touch $@  
 
 # rule to build the report automatically in our container
